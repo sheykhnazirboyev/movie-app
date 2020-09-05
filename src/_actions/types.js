@@ -1,0 +1,13 @@
+// Movie actions
+export const GET_CONFIG = "GET_CONFIG";
+export const FETCTH_MOVIES = "FETCTH_MOVIES";
+export const SEARCH_MOVIE = "SEARCH_MOVIE";
+export const SET_PAGINATION = "SET_PAGINATION";
+export const GET_GENRES = "GET_GENRES";
+export const FETCH_MOVIE_DETAILS = "FETCH_MOVIE_DETAILS";
+export const CLEAR_MOVIE_DETAILS = "CLEAR_MOVIE_DETAILS";
+export const GET_RECOMENDATIONS = "GET_RECOMENDATIONS";
+
+// App actions
+export const TOGGLE_LOADER = "TOGGLE_LOADER";
+
