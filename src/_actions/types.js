@@ -2,11 +2,14 @@
 export const GET_CONFIG = "GET_CONFIG";
 export const FETCTH_MOVIES = "FETCTH_MOVIES";
 export const SEARCH_MOVIE = "SEARCH_MOVIE";
+export const SEARCH_KEYWORD = "SEARCH_KEYWORD";
 export const SET_PAGINATION = "SET_PAGINATION";
 export const GET_GENRES = "GET_GENRES";
 export const FETCH_MOVIE_DETAILS = "FETCH_MOVIE_DETAILS";
 export const CLEAR_MOVIE_DETAILS = "CLEAR_MOVIE_DETAILS";
 export const GET_RECOMENDATIONS = "GET_RECOMENDATIONS";
+export const NOT_FOUND = "NOT_FOUND";
+export const UNAUTHORIZED = "UNAUTHORIZED";
 
 // App actions
 export const TOGGLE_LOADER = "TOGGLE_LOADER";

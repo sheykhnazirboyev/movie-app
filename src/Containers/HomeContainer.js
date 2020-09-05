@@ -10,9 +10,10 @@ function HomeContainer() {
 
     const page = useSelector(state => state.movies.page)
 
-    useEffect(() => {
-        dispatch(fetchMovies(page));
-    }, [page])
+    useEffect(() => 
+        dispatch(fetchMovies(page))
+    , [page])
+
     
     const movies = useSelector(state => state.movies.movies)
 

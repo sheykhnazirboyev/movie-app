@@ -41,11 +41,11 @@ function Recomendations(props) {
             }
         ]
     };
-    console.log(props.recomendations)
+    
     const classes = useStyles();
     const slides = props.recomendations &&
         props.recomendations.map((s, i) =>
-            <div className={classes.slideItem}>
+            <div className={classes.slideItem} key = {i}>
                 <Card {...s} />
             </div>)
 

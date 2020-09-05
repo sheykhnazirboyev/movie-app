@@ -1,4 +1,4 @@
-import { FETCTH_MOVIES, GET_CONFIG, SEARCH_MOVIE, SET_PAGINATION, GET_GENRES, FETCH_MOVIE_DETAILS, GET_RECOMENDATIONS, CLEAR_MOVIE_DETAILS } from "../_actions/types";
+import { FETCTH_MOVIES, GET_CONFIG, SEARCH_MOVIE, SET_PAGINATION, GET_GENRES, FETCH_MOVIE_DETAILS, GET_RECOMENDATIONS, CLEAR_MOVIE_DETAILS, SEARCH_KEYWORD, NOT_FOUND } from "../_actions/types";
 
 const initialState = {
     movies: [],
@@ -8,8 +8,10 @@ const initialState = {
     page: 1,
     total_pages: 1,
     genres: [],
+    search_keyword:"",
     recomendations: [],
-    movie_details:{}
+    movie_details:{},
+    error:""
 };
 
 export default function(state = initialState, action){
@@ -32,6 +34,8 @@ export default function(state = initialState, action){
                     ...state, 
                     movies: action.payload.results
                 }
+        case SEARCH_KEYWORD:
+            return {...state, search_keyword: action.payload}
         case SET_PAGINATION: 
                 return {
                     ...state,
@@ -47,6 +51,8 @@ export default function(state = initialState, action){
             ...state,
             movie_details: action.payload
         }
+        case NOT_FOUND:
+            return {...state, error: action.payload}
         case GET_RECOMENDATIONS: 
             return {
                 ...state,

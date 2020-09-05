@@ -12,7 +12,6 @@ function Detailscard(props) {
     const baseImageUrl = useSelector(state => state.movies.baseImageUrl)
     const AllGenres = useSelector(state => state.movies.genres)
 
-    console.log(props)
 
     const renderGenres = props.genres &&
         props.genres.map(g => <span key={g.id} className={classes.genres}>{AllGenres[g.id]}</span>)
@@ -26,7 +25,7 @@ function Detailscard(props) {
         props.production_countries.map((c, i) => <li key={i}>- {c.name}</li>)
 
     const languages = props.spoken_languages &&
-        props.spoken_languages.map((l, i) => <li key = {i}>-{l.name}</li>)
+        props.spoken_languages.map((l, i) => <li key = {i}>-{l.name}</li>)  
 
     return (
         <div className={classes.root} >
@@ -74,9 +73,6 @@ function Detailscard(props) {
                             </Grid>
                             
                         </Grid>
-
-
-
                     </div>
                 </Grid>
             </Grid>
